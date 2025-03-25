@@ -1722,3 +1722,10 @@ article#carte h2.major {
     margin: 1rem auto !important;
   }
 }
+
+#header nav ul li a {
+  font-weight: 700 !important;  /* ou la graisse souhaitée */
+  font-size: 1.1rem !important;   /* ajuste la taille selon tes préférences */
+  color: #fff !important;         /* couleur du texte */
+  text-transform: uppercase !important;
+}
