@@ -1674,3 +1674,11 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100%;
   border: 0;
 }
+/* Ajustements spécifiques pour l’article #carte */
+article#carte {
+  width: 90vw !important;         /* Occuper 90% de la largeur de l’écran */
+  max-width: 1200px !important;   /* Limite sur grand écran */
+  padding: 2rem 1rem !important;  /* Moins de padding pour plus d'espace à la carte */
+  background-color: rgba(27, 31, 34, 0.75) !important; /* Légèrement plus transparent */
+  min-height: 60vh;               /* Au moins 60% de la hauteur de l’écran */
+}
