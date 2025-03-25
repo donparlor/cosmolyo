@@ -1657,20 +1657,7 @@ h1, h2, h3, h4, h5, h6, p {
 .map-container {
   position: relative;
   width: 100%;
-  /* 
-     Choisis un ratio. 56.25% = 16:9
-     Si tu préfères plus vertical, tu peux augmenter le pourcentage, ex: 75%
-  */
-  padding-bottom: 56.25%; 
-  height: 0;
-  overflow: hidden;
-}
-
-.map-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%; /* ratio 1:1 (carré) */
-  height: 0;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -1683,28 +1670,23 @@ h1, h2, h3, h4, h5, h6, p {
   border: 0;
 }
 
-/* Ajustements spécifiques pour l’article #carte */
+/* --- Rendre l’article #carte flexible sur desktop --- */
 article#carte {
-  width: 90vw !important;         /* Occuper 90% de la largeur de l’écran */
-  max-width: 1200px !important;   /* Limite sur grand écran */
-  padding: 2rem 1rem !important;  /* Moins de padding pour plus d'espace à la carte */
-  background-color: rgba(27, 31, 34, 0.75) !important; /* Légèrement plus transparent */
-  min-height: 60vh;               /* Au moins 60% de la hauteur de l’écran */
+  width: 90vw !important;      /* 90% de la largeur de l’écran */
+  max-width: 1200px !important;/* Limite sur très grand écran */
+  height: 80vh !important;     /* 80% de la hauteur de l’écran */
+  margin: 2rem auto !important;/* Centré, marge en haut/bas */
+  padding: 0 !important;       /* Laisse de la place pour la carte */
+  border-radius: 4px !important;
+  overflow: hidden !important; /* Évite les scrollbars internes */
+  background-color: rgba(27, 31, 34, 0.8) !important; /* Légèrement transparent */
 }
 
-/* --- Pour agrandir l’article #carte en mobile --- */
+/* --- Ajuster l’article #carte sur mobile (max-width: 736px) --- */
 @media screen and (max-width: 736px) {
-  /* Rendre l’article #carte quasi plein écran sur mobile */
-  #main article#carte {
-    width: 100vw !important;   /* Occupe toute la largeur */
-    height: 100vh !important;  /* Occupe toute la hauteur */
-    min-height: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    background-color: #1b1f22 !important; /* ou none, selon tes goûts */
-    overflow: hidden !important; /* Évite les scrollbars internes */
+  article#carte {
+    width: 95vw !important;    /* Un peu plus large sur mobile */
+    height: 85vh !important;   /* Un peu plus haut sur mobile */
+    margin: 1rem auto !important;
   }
 }
-}
-
